@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="389.0" prefWidth="599.0" style="-fx-background-image: url('https://motionarray.imgix.net/preview-75634-8YcoQ8Fyf3_0000.jpg');" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="244.0" layoutX="31.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="375.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="186.0" layoutX="415.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="173.0" />
+      <TextField fx:id="firstCount" layoutX="135.0" layoutY="51.0" onAction="#counts" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="firstPrice" layoutX="188.0" layoutY="51.0" prefHeight="25.0" prefWidth="87.0" />
+      <TextField fx:id="firstSum" editable="false" layoutX="288.0" layoutY="51.0" prefHeight="25.0" prefWidth="104.0" />
+      <Text layoutX="53.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Позиция" />
+      <Text layoutX="124.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Количество" wrappingWidth="65.1953125" />
+      <Text layoutX="213.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Цена" />
+      <Text layoutX="317.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Сумма" />
+      <TextField fx:id="secondCount" layoutX="135.0" layoutY="92.0" onAction="#counts" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="secondPrice" layoutX="188.0" layoutY="92.0" prefHeight="25.0" prefWidth="87.0" />
+      <TextField fx:id="secondSum" editable="false" layoutX="288.0" layoutY="92.0" prefHeight="25.0" prefWidth="104.0" />
+      <TextField fx:id="thirdCount" layoutX="135.0" layoutY="130.0" onAction="#counts" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="thirdPrice" layoutX="188.0" layoutY="130.0" prefHeight="25.0" prefWidth="87.0" />
+      <TextField fx:id="thirdSum" editable="false" layoutX="288.0" layoutY="130.0" prefHeight="25.0" prefWidth="104.0" />
+      <TextField fx:id="fourCount" layoutX="135.0" layoutY="171.0" onAction="#counts" prefHeight="25.0" prefWidth="43.0" />
+      <TextField fx:id="fourPrice" layoutX="188.0" layoutY="171.0" prefHeight="25.0" prefWidth="87.0" />
+      <TextField fx:id="fourSum" editable="false" layoutX="288.0" layoutY="171.0" prefHeight="25.0" prefWidth="104.0" />
+      <Text fx:id="textRevenue" layoutX="428.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выручка:" wrappingWidth="65.1953125" />
+      <Text layoutX="-9.0" layoutY="-22.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+      <Text layoutX="44.0" layoutY="239.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Итого:" wrappingWidth="77.16796875">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
+      <Text fx:id="totalSum" layoutX="102.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="428.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выручка по переводу:" wrappingWidth="104.0" />
+      <Text fx:id="textRevenueCash" layoutX="428.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выручка наличными:" wrappingWidth="111.13671875" />
+      <Text layoutX="427.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Выручка работника:" />
+      <Text fx:id="revenue" layoutX="483.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+      <Text fx:id="transferRevenue" layoutX="488.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+      <Text fx:id="CashRevenue" layoutX="499.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+      <Text fx:id="stuffRevenue" layoutX="542.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+      <Button fx:id="coctMap" layoutX="31.0" layoutY="280.0" mnemonicParsing="false" onAction="#openCocktails" prefHeight="87.0" prefWidth="375.0" text="Коктейльная карта">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </Button>
+      <Text layoutX="427.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Нерасчитанных столов:" />
+      <Text fx:id="countTables" layoutX="564.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+      <VBox layoutX="436.0" layoutY="220.0">
+         <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="Добавить заказ" />
+         <Button fx:id="openTables" mnemonicParsing="false" onAction="#Tables" prefHeight="25.0" prefWidth="143.0" text="Открыть столы" />
+         <Button fx:id="countUp" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="Рассчитать" />
+         <Button fx:id="saveExcel" alignment="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="143.0" text="Закрыть смену" />
+      </VBox>
+      <ComboBox fx:id="firstPos" layoutX="37.0" layoutY="51.0" onAction="#posCount1" prefHeight="25.0" prefWidth="95.0" promptText="Выбрать " AnchorPane.bottomAnchor="313.0">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Виски кола" />
+               <String fx:value="Кричащий оргазм" />
+               <String fx:value="Стиратель памяти" />
+               <String fx:value="Голубая лагуна" />
+               <String fx:value="Черный русский" />
+               <String fx:value="Благодарный мертвец" />
+               <String fx:value="Негрони" />
+               <String fx:value="Отвертка" />
+               <String fx:value="Джин тоник" />
+               <String fx:value="Полет на луну" />
+               <String fx:value="Зеленая фея" />
+               <String fx:value="Текила бум" />
+               <String fx:value="Лонг Айленд" />
+               <String fx:value="Маргарита" />
+               <String fx:value="Маргарита клубничная" />
+               <String fx:value="Дайкири" />
+               <String fx:value="Пина колада" />
+               <String fx:value="День без мужа" />
+               <String fx:value="Свидание" />
+               <String fx:value="Вишневая любовь" />
+               <String fx:value="Текила Санрайз" />
+               <String fx:value="Мохито" />
+               <String fx:value="Куба либре" />
+               <String fx:value="Выстрел в голову" />
+               <String fx:value="Хиросима" />
+               <String fx:value="Медуза" />
+               <String fx:value="Боярский" />
+               <String fx:value="Б52" />
+               <String fx:value="Рафаэлло" />
+               <String fx:value="Таракан" />
+               <String fx:value="бомж" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <ComboBox fx:id="secondPos" layoutX="37.0" layoutY="92.0" onAction="#posCount2" prefHeight="25.0" prefWidth="95.0" promptText="Выбрать ">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Виски кола" />
+               <String fx:value="Кричащий оргазм" />
+               <String fx:value="Стиратель памяти" />
+               <String fx:value="Голубая лагуна" />
+               <String fx:value="Черный русский" />
+               <String fx:value="Благодарный мертвец" />
+               <String fx:value="Негрони" />
+               <String fx:value="Отвертка" />
+               <String fx:value="Джин тоник" />
+               <String fx:value="Полет на луну" />
+               <String fx:value="Зеленая фея" />
+               <String fx:value="Текила бум" />
+               <String fx:value="Лонг Айленд" />
+               <String fx:value="Маргарита" />
+               <String fx:value="Маргарита клубничная" />
+               <String fx:value="Дайкири" />
+               <String fx:value="Пина колада" />
+               <String fx:value="День без мужа" />
+               <String fx:value="Свидание" />
+               <String fx:value="Вишневая любовь" />
+               <String fx:value="Текила Санрайз" />
+               <String fx:value="Мохито" />
+               <String fx:value="Куба либре" />
+               <String fx:value="Выстрел в голову" />
+               <String fx:value="Хиросима" />
+               <String fx:value="Медуза" />
+               <String fx:value="Боярский" />
+               <String fx:value="Б52" />
+               <String fx:value="Рафаэлло" />
+               <String fx:value="Таракан" />
+               <String fx:value="бомж" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <ComboBox fx:id="thirdPos" layoutX="37.0" layoutY="130.0" onAction="#posCount3" prefHeight="25.0" prefWidth="95.0" promptText="Выбрать ">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Виски кола" />
+               <String fx:value="Кричащий оргазм" />
+               <String fx:value="Стиратель памяти" />
+               <String fx:value="Голубая лагуна" />
+               <String fx:value="Черный русский" />
+               <String fx:value="Благодарный мертвец" />
+               <String fx:value="Негрони" />
+               <String fx:value="Отвертка" />
+               <String fx:value="Джин тоник" />
+               <String fx:value="Полет на луну" />
+               <String fx:value="Зеленая фея" />
+               <String fx:value="Текила бум" />
+               <String fx:value="Лонг Айленд" />
+               <String fx:value="Маргарита" />
+               <String fx:value="Маргарита клубничная" />
+               <String fx:value="Дайкири" />
+               <String fx:value="Пина колада" />
+               <String fx:value="День без мужа" />
+               <String fx:value="Свидание" />
+               <String fx:value="Вишневая любовь" />
+               <String fx:value="Текила Санрайз" />
+               <String fx:value="Мохито" />
+               <String fx:value="Куба либре" />
+               <String fx:value="Выстрел в голову" />
+               <String fx:value="Хиросима" />
+               <String fx:value="Медуза" />
+               <String fx:value="Боярский" />
+               <String fx:value="Б52" />
+               <String fx:value="Рафаэлло" />
+               <String fx:value="Таракан" />
+               <String fx:value="бомж" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <ComboBox fx:id="fourPos" layoutX="37.0" layoutY="171.0" onAction="#posCount4" prefHeight="25.0" prefWidth="95.0" promptText="Выбрать ">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Виски кола" />
+               <String fx:value="Кричащий оргазм" />
+               <String fx:value="Стиратель памяти" />
+               <String fx:value="Голубая лагуна" />
+               <String fx:value="Черный русский" />
+               <String fx:value="Благодарный мертвец" />
+               <String fx:value="Негрони" />
+               <String fx:value="Отвертка" />
+               <String fx:value="Джин тоник" />
+               <String fx:value="Полет на луну" />
+               <String fx:value="Зеленая фея" />
+               <String fx:value="Текила бум" />
+               <String fx:value="Лонг Айленд" />
+               <String fx:value="Маргарита" />
+               <String fx:value="Маргарита клубничная" />
+               <String fx:value="Дайкири" />
+               <String fx:value="Пина колада" />
+               <String fx:value="День без мужа" />
+               <String fx:value="Свидание" />
+               <String fx:value="Вишневая любовь" />
+               <String fx:value="Текила Санрайз" />
+               <String fx:value="Мохито" />
+               <String fx:value="Куба либре" />
+               <String fx:value="Выстрел в голову" />
+               <String fx:value="Хиросима" />
+               <String fx:value="Медуза" />
+               <String fx:value="Боярский" />
+               <String fx:value="Б52" />
+               <String fx:value="Рафаэлло" />
+               <String fx:value="Таракан" />
+               <String fx:value="бомж" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+   </children>
+</AnchorPane>
