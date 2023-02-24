@@ -4,6 +4,7 @@ module TUMAH {
     requires javafx.graphics;
     requires javafx.fxml;
 
+
     opens sample;
     opens sample.cocts;
 }

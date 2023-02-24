@@ -43,7 +43,7 @@ public class mainController {
         stage.setScene(new Scene(root));
         stage.setTitle(Title);
         stage.initModality(Modality.NONE);
-        stage.showAndWait();
+        stage.show();
         stage.setResizable(false);
 
     }

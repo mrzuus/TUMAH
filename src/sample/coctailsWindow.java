@@ -136,7 +136,7 @@ public class coctailsWindow {
     public void whiskeyWindow(ActionEvent actionEvent) {
         whiskeyCola.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/whiskeyCola.fxml","Виски Кола");
+                openNewScene("/sample/cocktailsInfo/whiskeyCola.fxml","Виски Кола");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -146,7 +146,7 @@ public class coctailsWindow {
     public void orgasmWindow(ActionEvent actionEvent) {
         orgasm.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/orgasm.fxml","Кричащий оргазм");
+                openNewScene("/sample/cocktailsInfo/orgasm.fxml","Кричащий оргазм");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -156,7 +156,7 @@ public class coctailsWindow {
     public void memoryWindow(ActionEvent actionEvent) {
         memory.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/memory.fxml","Стиратель памяти");
+                openNewScene("/sample/cocktailsInfo/memory.fxml","Стиратель памяти");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -166,7 +166,7 @@ public class coctailsWindow {
     public void blueLagoonWindow(ActionEvent actionEvent) {
         blueLagoon.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/blueLagoon.fxml","Голубая лагуна");
+                openNewScene("/sample/cocktailsInfo/blueLagoon.fxml","Голубая лагуна");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -176,7 +176,7 @@ public class coctailsWindow {
     public void blackRussianWIndow(ActionEvent actionEvent) {
         blackRussian.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/blackRussian.fxml","Чёрный русский");
+                openNewScene("/sample/cocktailsInfo/blackRussian.fxml","Чёрный русский");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -186,7 +186,7 @@ public class coctailsWindow {
     public void deadmanWindow(ActionEvent actionEvent) {
         deadMan.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/deadman.fxml","Благодарный мертвец");
+                openNewScene("/sample/cocktailsInfo/deadman.fxml","Благодарный мертвец");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -196,7 +196,7 @@ public class coctailsWindow {
     public void aperolWindow(ActionEvent actionEvent) {
         aperol.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/aperol.fxml","Апероль Шпритц");
+                openNewScene("/sample/cocktailsInfo/aperol.fxml","Апероль Шпритц");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -206,7 +206,7 @@ public class coctailsWindow {
     public void negroniWindow(ActionEvent actionEvent) {
         negroni.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/negroni.fxml","Негрони");
+                openNewScene("/sample/cocktailsInfo/negroni.fxml","Негрони");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -216,7 +216,7 @@ public class coctailsWindow {
     public void otvertkaWIndow(ActionEvent actionEvent) {
         otvertka.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/otvertka.fxml","Отвёртка ");
+                openNewScene("/sample/cocktailsInfo/otvertka.fxml","Отвёртка ");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -226,7 +226,7 @@ public class coctailsWindow {
     public void ginTonicWindow(ActionEvent actionEvent) {
         ginTonic.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/ginTonic.fxml","Джин Тоник");
+                openNewScene("/sample/cocktailsInfo/ginTonic.fxml","Джин Тоник");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -236,7 +236,7 @@ public class coctailsWindow {
     public void flyToMoonWindow(ActionEvent actionEvent) {
         flyToMoon.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/flyToMoon.fxml","Полёт на Луну");
+                openNewScene("/sample/cocktailsInfo/flyToMoon.fxml","Полёт на Луну");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -246,7 +246,7 @@ public class coctailsWindow {
     public void greenSpirit(ActionEvent actionEvent) {
         greenSpirit.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/greenSpirit.fxml","Виски Кола");
+                openNewScene("/sample/cocktailsInfo/greenSpirit.fxml","Виски Кола");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -256,7 +256,7 @@ public class coctailsWindow {
     public void shurupWindow(ActionEvent actionEvent) {
         shurup.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/shurup.fxml","Шуруповёрт");
+                openNewScene("/sample/cocktailsInfo/shurup.fxml","Шуруповёрт");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -266,7 +266,7 @@ public class coctailsWindow {
     public void tequilaBoomWindow(ActionEvent actionEvent) {
         tequilaBoom.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/tequilaBoom.fxml","Текила Бум");
+                openNewScene("/sample/cocktailsInfo/tequilaBoom.fxml","Текила Бум");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -276,7 +276,7 @@ public class coctailsWindow {
     public void longIslandWIndow(ActionEvent actionEvent) {
         longIsland.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/longIsland.fxml","Лонг Айленд");
+                openNewScene("/sample/cocktailsInfo/longIsland.fxml","Лонг Айленд");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -286,7 +286,7 @@ public class coctailsWindow {
     public void margaritaWIndow(ActionEvent actionEvent) {
         margarita.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/margarita.fxml","Маргарита");
+                openNewScene("/sample/cocktailsInfo/margarita.fxml","Маргарита");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -296,7 +296,7 @@ public class coctailsWindow {
     public void strawberryMargaritaWindow(ActionEvent actionEvent) {
         strawberryMargarita.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/strawberryMargarita.fxml","Клубничная Маргарита");
+                openNewScene("/sample/cocktailsInfo/strawberryMargarita.fxml","Клубничная Маргарита");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -306,7 +306,7 @@ public class coctailsWindow {
     public void daiquiriWindow(ActionEvent actionEvent) {
         daiquiri.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/daiquiri.fxml","Дайкири");
+                openNewScene("/sample/cocktailsInfo/daiquiri.fxml","Дайкири");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -316,7 +316,7 @@ public class coctailsWindow {
     public void pinaColadaWindow(ActionEvent actionEvent) {
         pinaColada.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/pinaColada.fxml","Пина Колада");
+                openNewScene("/sample/cocktailsInfo/pinaColada.fxml","Пина Колада");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -326,7 +326,7 @@ public class coctailsWindow {
     public void husbandWindow(ActionEvent actionEvent) {
         husband.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/husband.fxml","День без мужа");
+                openNewScene("/sample/cocktailsInfo/husband.fxml","День без мужа");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -336,7 +336,7 @@ public class coctailsWindow {
     public void meetingWindow(ActionEvent actionEvent) {
         meeting.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/meeting.fxml","Свидание");
+                openNewScene("/sample/cocktailsInfo/meeting.fxml","Свидание");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -346,7 +346,7 @@ public class coctailsWindow {
     public void cherryLoveWindow(ActionEvent actionEvent) {
         cherryLove.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/cherryLove.fxml","Вишнёвая любовь");
+                openNewScene("/sample/cocktailsInfo/cherryLove.fxml","Вишнёвая любовь");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -356,7 +356,7 @@ public class coctailsWindow {
     public void TequilaSunriseWindow(ActionEvent actionEvent) {
         TequilaSunrise.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/tequilaSunrise.fxml","Текила Санрайз");
+                openNewScene("/sample/cocktailsInfo/tequilaSunrise.fxml","Текила Санрайз");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -366,7 +366,7 @@ public class coctailsWindow {
     public void mohitoWIndow(ActionEvent actionEvent) {
         mohito.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/mohito.fxml","Мохито");
+                openNewScene("/sample/cocktailsInfo/mohito.fxml","Мохито");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -376,7 +376,7 @@ public class coctailsWindow {
     public void cubaLibraWIndow(ActionEvent actionEvent) {
         cubaLibra.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/cubaLibra.fxml","Куба Либрэ");
+                openNewScene("/sample/cocktailsInfo/cubaLibra.fxml","Куба Либрэ");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -386,7 +386,7 @@ public class coctailsWindow {
     public void headshotWindow(ActionEvent actionEvent) {
         headShot.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/headshot.fxml","Выстрел в голову");
+                openNewScene("/sample/cocktailsInfo/headshot.fxml","Выстрел в голову");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -396,7 +396,7 @@ public class coctailsWindow {
     public void hiroshimaWindow(ActionEvent actionEvent) {
         hiroshima.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/hiroshima.fxml","Хиросима");
+                openNewScene("/sample/cocktailsInfo/hiroshima.fxml","Хиросима");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -406,7 +406,7 @@ public class coctailsWindow {
     public void medusaWIndow(ActionEvent actionEvent) {
         medusa.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/medusa.fxml","Медуза");
+                openNewScene("/sample/cocktailsInfo/medusa.fxml","Медуза");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -416,7 +416,7 @@ public class coctailsWindow {
     public void boyarskyWindow(ActionEvent actionEvent) {
         boyarsky.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/boyarsky.fxml","Боярский");
+                openNewScene("/sample/cocktailsInfo/boyarsky.fxml","Боярский");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -426,7 +426,7 @@ public class coctailsWindow {
     public void b52Window(ActionEvent actionEvent) {
         b52.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/b52.fxml","Б52");
+                openNewScene("/sample/cocktailsInfo/b52.fxml","Б52");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -436,7 +436,7 @@ public class coctailsWindow {
     public void rafaelloWindow(ActionEvent actionEvent) {
         rafaello.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/rafaello.fxml","Рафаэлло");
+                openNewScene("/sample/cocktailsInfo/rafaello.fxml","Рафаэлло");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -446,7 +446,7 @@ public class coctailsWindow {
     public void beetleWindow(ActionEvent actionEvent) {
         beetle.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/beetle.fxml","Таракан");
+                openNewScene("/sample/cocktailsInfo/beetle.fxml","Таракан");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -456,7 +456,7 @@ public class coctailsWindow {
     public void homelessWindow(ActionEvent actionEvent) {
         homeless.setOnAction(event -> {
             try {
-                openNewScene("/sample/tablesInfo/homeless.fxml","БОМЖ");
+                openNewScene("/sample/cocktailsInfo/homeless.fxml","БОМЖ");
             } catch (IOException e) {
                 e.printStackTrace();
             }

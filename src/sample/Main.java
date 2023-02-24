@@ -17,7 +17,7 @@ public class Main extends Application {
         primaryStage.show();
         primaryStage.getIcons().add(new Image("cocktail.png"));
 primaryStage.setResizable(false);
-
+        System.out.println("123");
 
     }
 
