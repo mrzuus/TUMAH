@@ -7,4 +7,6 @@ module TUMAH {
 
     opens sample;
     opens sample.cocts;
+    opens sample.sceneTables;
+    opens sample.tableControllers;
 }

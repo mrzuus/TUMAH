@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -58,6 +59,7 @@ public void setCurrentTabel (String str){
     }
 @FXML
 void openVip (ActionEvent actionEvent) {
+    currentTabel = "VIP";
         vipTable.setOnAction(event -> {
             try {
                 openNewScene("/sample/tables.fxml","Вип");
@@ -67,12 +69,12 @@ void openVip (ActionEvent actionEvent) {
             tableCheckInfo.clearTable();
         });
 
-currentTabel = "VIP";
+
 }
-    @FXML
-    public static Text numberTable;
+
     @FXML
     void openFifth (ActionEvent actionEvent) {
+        currentTabel = "5";
 Fifth.setOnAction(event -> {
     try {
         openNewScene("/sample/tables.fxml","Пятый стол");
@@ -81,36 +83,38 @@ Fifth.setOnAction(event -> {
     }
     tableCheckInfo.clearTable();
 });
-currentTabel = "5";
+
     }
 
     @FXML
     void openFirst(ActionEvent actionEvent) {
+        currentTabel = "1";
 firstTable.setOnAction(event -> {
     try {
-        openNewScene("/sample/tables.fxml","Первый стол");
+        openNewScene("/sample/sceneTables/firstTable.fxml","Первый стол");
     } catch (IOException e) {
         e.printStackTrace();
     } });
-currentTabel = "1";
 //        tableCheckInfo.clearTable();
     }
 
     @FXML
     void openFouth(ActionEvent actionEvent) {
+        currentTabel = "4";
         fourth.setOnAction(event -> {
             try {
-                openNewScene("/sample/tables.fxml", "Коктейльная карта");
+                openNewScene("/sample/tables.fxml", "Четвёртый стол");
             } catch (IOException e) {
                 e.printStackTrace();
             }
         });
 //        tableCheckInfo.clearTable();
-currentTabel = "4";
+
     }
 
     @FXML
     void openSecond(ActionEvent actionEvent) {
+        currentTabel = "2";
         secondTable.setOnAction(event -> {
             try {
                 openNewScene("/sample/tables.fxml","Второй стол");
@@ -118,11 +122,12 @@ currentTabel = "4";
                 e.printStackTrace();
             } });
 //        tableCheckInfo.clearTable();
-        currentTabel = "2";
+
     }
 
     @FXML
     void openThird(ActionEvent actionEvent) {
+        currentTabel = "3";
 thirdTable.setOnAction(event -> {
     try {
         openNewScene("/sample/tables.fxml","Третий стол");
@@ -131,7 +136,7 @@ thirdTable.setOnAction(event -> {
     }
 });
 //        tableCheckInfo.clearTable();
-currentTabel = "3";
+
 
     }
     public void close(ActionEvent actionEvent) {

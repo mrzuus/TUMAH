@@ -229,8 +229,9 @@
          <Font size="21.0" />
       </font>
    </Text>
-   <TextField fx:id="numberTable" alignment="CENTER" editable="false" layoutX="554.0" layoutY="57.0" prefHeight="25.0" prefWidth="43.0" text="1">
+   <Text fill="WHITE" layoutX="568.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" wrappingWidth="54.13671875">
       <font>
-         <Font size="15.0" />
-      </font></TextField>
+         <Font size="22.0" />
+      </font>
+   </Text>
 </AnchorPane>

@@ -1,5 +1,6 @@
 package sample;
-import sample.javaTables.*;
+
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,13 +10,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import sample.cocts.*;
+import sample.javaTables.*;
+
 import java.io.IOException;
 import java.net.URL;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.ResourceBundle;
 import java.util.regex.Pattern;
 
 
@@ -86,6 +91,10 @@ public class tableController implements Initializable {
     @FXML
     private TextField numberTable;
 
+    @FXML
+    private AnchorPane anchor;
+
+
     private void openNewScene(String window, String Title) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource(window));
         Stage stage = new Stage();
@@ -95,13 +104,13 @@ public class tableController implements Initializable {
         stage.showAndWait();
         stage.setResizable(false);
 
-
     }
-String curTable = choiseTable.currentTabel;
+
 
     @FXML
     void ComboBoxUse(ComboBox box, TextField text, TextField count) {
-        numberTable.setText(curTable);
+        numberTable.setText(choiseTable.currentTabel);
+        System.out.println(choiseTable.currentTabel);
         switch (box.getValue().toString()) {
             case "Виски кола":
                 text.setText(whiskeyCola.count);
@@ -259,7 +268,6 @@ String curTable = choiseTable.currentTabel;
         });
 
 
-
     }
 
     public void delete(ActionEvent actionEvent) {
@@ -290,6 +298,7 @@ String curTable = choiseTable.currentTabel;
    static public secondTable sT = new secondTable(new ArrayList<>());
    static public thirdTable tT = new thirdTable(new ArrayList<>());
     static public fouthTable foT = new fouthTable(new ArrayList<>());
+    static public fifthTable fiT = new fifthTable(new ArrayList<>());
     static public  vip vT = new vip(new ArrayList<>());
 
 
@@ -350,6 +359,19 @@ String curTable = choiseTable.currentTabel;
             if (posIsNotNull(fourPos)  ) {
                 foT.addPos( fourPos.getValue().toString(), Integer.parseInt(fourCount.getText()), Integer.parseInt(fourPrice.getText()) ,"4" );
             }
+        }if (numberTable.getText().equals("5")) {
+            if (posIsNotNull(firstPos) ) {
+                fiT.addPos( firstPos.getValue().toString(), Integer.parseInt(firstCount.getText()), Integer.parseInt(firstPrice.getText()),"5" );
+            }
+            if (posIsNotNull(secondPos)  ) {
+                fiT.addPos( secondPos.getValue().toString(), Integer.parseInt(secondCount.getText()), Integer.parseInt(secondPrice.getText()),"5" );
+            }
+            if (posIsNotNull(thirdPos)  ) {
+                fiT.addPos( thirdPos.getValue().toString(), Integer.parseInt(thirdCount.getText()), Integer.parseInt(thirdPrice.getText()),"5"  );
+            }
+            if (posIsNotNull(fourPos)  ) {
+                fiT.addPos( fourPos.getValue().toString(), Integer.parseInt(fourCount.getText()), Integer.parseInt(fourPrice.getText()) ,"5" );
+            }
         }
         if (numberTable.getText().equals("VIP")) {
             if (posIsNotNull(firstPos) ) {
@@ -369,6 +391,7 @@ clearFullPos(firstPos,firstCount,firstPrice);
 clearFullPos(secondPos,secondCount,secondPrice);
 clearFullPos(thirdPos,thirdCount,thirdPrice);
 clearFullPos(fourPos,fourCount,fourPrice);
+
     }
 
         public void setSum (TextField count, TextField price, TextField Sum){
@@ -400,15 +423,12 @@ clearFullPos(fourPos,fourCount,fourPrice);
 
         @Override
         public void initialize (URL url, ResourceBundle resourceBundle){
-firstTable pt = new firstTable(new ArrayList<>());
+            System.out.println();
 
-if(!choiseTable.currentTabel.equals(numberTable.getText())){
-    numberTable.setText(choiseTable.currentTabel);
-}
+
 
             numberTable.setText(choiseTable.currentTabel);
             Pattern p = Pattern.compile("(\\d+\\.?\\d*)?");
-
             firstSum.textProperty().addListener((observableValue) -> totalSum.setText(String.valueOf(totalAmount())));
             firstPrice.textProperty().addListener((observableValue) -> firstSum.setText(String.valueOf(totalPosAmount(firstCount, firstPrice))));
             secondSum.textProperty().addListener((observableValue) -> totalSum.setText(String.valueOf(totalAmount())));
@@ -451,12 +471,11 @@ if(!choiseTable.currentTabel.equals(numberTable.getText())){
             onlyNumbers(secondCount);
             onlyNumbers(fourPrice);
         }
-        void onlyNumbers (TextField field){
+        void onlyNumbers (TextField field) {
             Pattern p = Pattern.compile("(\\d+\\.?\\d*)?");
             field.textProperty().addListener((observableValue, oldValue, newValue) -> {
                 if (!p.matcher(newValue).matches()) field.setText(oldValue);
             });
         }
-
 
 }

@@ -9,21 +9,23 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import sample.javaTables.table;
 
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-import static sample.tableController.vT;
 
 public class tableCheckInfo implements Initializable {
     public static void setCurrentTable(String currentTable) {
         tableCheckInfo.currentTable = currentTable;
     }
 
+    public static String getCurrentTable() {
+        return currentTable;
+    }
 
     private static String currentTable = "";
+
 
     @FXML
     private Button close;
@@ -48,13 +50,13 @@ public class tableCheckInfo implements Initializable {
 //        Stage stage = (Stage) close.getScene().getWindow();
 //        stage.close();
 //        tablePositions.getItems().clear();
-        System.out.println(table.getTable("1")+ " -  is the firstTable ");
-
-        System.out.println(table.getTable("2")+ " -  is the secTable ");
-        System.out.println(table.getTable("3")+ " -  is the thTable ");
-        System.out.println(table.getTable("4")+ " -  is the FTable ");
-        System.out.println(table.getTable("VIP") + " - is VIP table");
-        System.out.println(currentTable.equals( "1") && !tableController.fT.getTable("1").isEmpty());
+        System.out.println(tableController.fT.getTable("1")+ " -  is the firstTable ");
+        System.out.println(tableController.sT.getTable("2")+ " -  is the secTable ");
+        System.out.println(tableController.tT.getTable("3")+ " -  is the thTable ");
+        System.out.println(tableController.foT.getTable("4")+ " -  is the FTable ");
+        System.out.println(tableController.fiT.getTable("5") + " - is fifth table");
+        System.out.println(tableController.vT.getTable("VIP") + " - is VIP table");
+        System.out.println(currentTable.equals("5") && !Objects.requireNonNull(tableController.fiT.getTable("5")).isEmpty());
 
 
     }
@@ -63,8 +65,6 @@ public static void clearTable (){
 
     }
 
-
-    ObservableList<tableModel> list = FXCollections.observableArrayList();
 
 
     public  void setPositions() {
@@ -90,28 +90,28 @@ public static void clearTable (){
                         String.valueOf(tableController.foT.getTable("4").get(i).getPrice()), String.valueOf(tableController.foT.getTable("4").get(i).getPrice()* Objects.requireNonNull(tableController.foT.getTable("4")).get(i).getAmount())));
             }
             }
+        if (currentTable.equals("5") && !Objects.requireNonNull(tableController.fiT.getTable("5")).isEmpty()) {
+            for (int i = 0; i< (tableController.fiT.getTable("3")).size(); i++){
+                lis.add(new tableModel(String.valueOf(tableController.fiT.getTable("5").get(i).getPos()), String.valueOf(tableController.fiT.getTable("5").get(i).getAmount()), String.valueOf(tableController.fiT.getTable("5").get(i).getPrice()), String.valueOf(tableController.fiT.getTable("5").get(i).getPrice()* (tableController.fiT.getTable("5")).get(i).getAmount())));
+            }
+        }
+//        if (currentTable.equals("VIP") && Objects.requireNonNull(vT.getTable("VIP")).get(0) != null) {
+//            for (int i = 0; i< Objects.requireNonNull(vT.getTable("VIP")).size(); i++){
+//                lis.add(new tableModel(Objects.requireNonNull(vT.getTable("VIP")).get(i).getPos(), String.valueOf(vT.getTable("VIP").get(i).getAmount()), String.valueOf(vT.getTable("VIP").get(i).getPrice()), String.valueOf(vT.getTable("VIP").get(i).getPrice()* Objects.requireNonNull(vT.getTable("VIP")).get(i).getAmount())));
+//            }
+//            }
 
-        if (currentTable.equals("VIP") && Objects.requireNonNull(vT.getTable("VIP")).get(0) != null) {
-            for (int i = 0; i< Objects.requireNonNull(vT.getTable("VIP")).size(); i++){
-                lis.add(new tableModel(Objects.requireNonNull(vT.getTable("VIP")).get(i).getPos(), String.valueOf(vT.getTable("VIP").get(i).getAmount()), String.valueOf(vT.getTable("VIP").get(i).getPrice()), String.valueOf(vT.getTable("VIP").get(i).getPrice()* Objects.requireNonNull(vT.getTable("VIP")).get(i).getAmount())));
-            }
-            }
-list = lis;
         tablePositions.setItems(lis);
 }
-public void updateTable(){
 
-}
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
         position.setCellValueFactory(new PropertyValueFactory<>("position"));
         count.setCellValueFactory(new PropertyValueFactory<>("count"));
         price.setCellValueFactory(new PropertyValueFactory<>("price"));
         sum.setCellValueFactory(new PropertyValueFactory<>("sum"));
         setPositions();
-
-
-
 }
 }

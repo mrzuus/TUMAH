@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane fx:id="anchor" prefHeight="383.0" prefWidth="635.0" style="-fx-background-image: url('https://motionarray.imgix.net/preview-75634-8YcoQ8Fyf3_0000.jpg');" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.tableController">
+<AnchorPane fx:id="anchor" prefHeight="383.0" prefWidth="635.0" style="-fx-background-image: url('https://motionarray.imgix.net/preview-75634-8YcoQ8Fyf3_0000.jpg');" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.tableControllers.vipTableController">
    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="231.0" layoutX="60.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="465.0" />
    <TextField fx:id="firstCount" alignment="CENTER" layoutX="233.0" layoutY="57.0" prefHeight="25.0" prefWidth="43.0" />
    <TextField fx:id="firstPrice" alignment="CENTER" layoutX="286.0" layoutY="57.0" prefHeight="25.0" prefWidth="87.0" />
@@ -229,8 +229,9 @@
          <Font size="21.0" />
       </font>
    </Text>
-   <TextField fx:id="numberTable" alignment="CENTER" editable="false" layoutX="554.0" layoutY="57.0" prefHeight="25.0" prefWidth="43.0" text="1">
+   <Text fill="WHITE" layoutX="562.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VIP" wrappingWidth="54.13671875">
       <font>
-         <Font size="15.0" />
-      </font></TextField>
+         <Font size="22.0" />
+      </font>
+   </Text>
 </AnchorPane>

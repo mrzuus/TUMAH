@@ -6,10 +6,6 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import sample.javaTables.*;
 
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.LinkedList;
-
 public class confirmDelete {
 static String currentTable = "";
     @FXML

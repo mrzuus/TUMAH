@@ -1,5 +1,6 @@
 package sample;
 
+import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +13,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class mainController {
+public class mainController extends Application {
     @FXML
     private Button closeShift;
 
@@ -75,5 +76,10 @@ public class mainController {
                 e.printStackTrace();
             }
         });
+    }
+
+    @Override
+    public void start(Stage stage) throws Exception {
+
     }
 }

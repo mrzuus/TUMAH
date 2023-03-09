@@ -1,7 +1,5 @@
 package sample.javaTables;
 
-import sample.tableController;
-
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -23,11 +21,15 @@ return firstTable.selectedPositions;
         }
         if (nt.equals("4")) {
             return fouthTable.selectedPositions;
+
+        }if (nt.equals("5") && !fifthTable.selectedPositions.isEmpty()) {
+            return fifthTable.selectedPositions;
+
         }
         if (nt.equals("VIP")) {
             return vip.selectedPositions;
         }
-        return null;
+        return fifthTable.selectedPositions;
     }
 
 
@@ -40,6 +42,7 @@ return firstTable.selectedPositions;
 
         public static void  addPos (String pos, int count, int price, String nt){
          chosenPos  newPos= new chosenPos(pos, count, price);
+
          if(nt.equals("1")){
             getTable("1").add(newPos);
          }if(nt.equals("2")){
@@ -48,6 +51,8 @@ return firstTable.selectedPositions;
             getTable("3").add(newPos);
          }if(nt.equals("4")){
             getTable("4").add(newPos);
+         }if(nt.equals("5")){
+            getTable("5").add(newPos);
          }if(nt.equals("VIP")){
             getTable("VIP").add(newPos);
          }
